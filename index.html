@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eashan Arora, Data Analyst</title>
+<meta name="description" content="Eashan Arora, data analyst in the United States working across analytics, analytics engineering and BI reporting.">
+<meta property="og:title" content="Eashan Arora, Data Analyst">
+<meta property="og:description" content="Revenue analytics, data pipelines and dashboards. Live Tableau work and dbt projects you can open.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F5F1EA; --paper:#FBF8F3; --ink:#1E2A33; --muted:#5F6B73; --line:#E3DCD0;
+  --accent:#1D4E63; --accent-ink:#FBF8F3; --accent-soft:#DCE7EA;
+  --mine:#9A5B00; --mine-soft:#FFF1D6;
+  --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#12181C; --paper:#182026; --ink:#ECE7DF; --muted:#9BA6AD; --line:#2A353D;
+    --accent:#8CC3D6; --accent-ink:#12181C; --accent-soft:#1D323B;
+    --mine:#F0B860; --mine-soft:#352914; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--accent);text-underline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:12px;background:var(--paper);padding:8px 12px;z-index:9}
+
+/* ---- header ---- */
+.site-head{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.mark{width:36px;height:36px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:600 14px var(--serif)}
+.brand b{display:block;font:600 15px/1.2 var(--serif)}
+.brand small{display:block;font-size:12px;color:var(--muted)}
+.site-head nav{display:flex;gap:24px;font-size:14px}
+.site-head nav a{color:var(--ink);text-decoration:none}
+.site-head nav a:hover{color:var(--accent)}
+
+/* ---- hero ---- */
+.hero{position:relative;padding:72px 0 56px;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-180px;top:-120px;width:520px;height:520px;border-radius:50%;border:44px solid var(--line);opacity:.55;pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.eyebrow{font:700 20px/1.4 var(--sans);color:var(--accent);letter-spacing:-.005em;margin:0 0 28px}
+.hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center}
+.hero h1{font:600 clamp(36px,5vw,54px)/1.12 var(--serif);letter-spacing:-.015em;margin:0}
+.hero .summary{margin:0 0 16px;font-size:16.5px}
+.stack{font:400 14px var(--mono);color:var(--muted);margin:0 0 24px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;font:600 14px var(--sans);text-decoration:none;border:1px solid var(--accent);color:var(--accent);background:var(--paper)}
+.btn.solid{background:var(--accent);color:var(--accent-ink)}
+
+/* ---- live dashboard ---- */
+.live{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px 22px 18px}
+.live-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:14px}
+.tag{font:500 12px var(--mono);color:var(--muted)}
+.live h2{font:600 22px/1.3 var(--serif);margin:4px 0 4px}
+.live p{margin:0;color:var(--muted);font-size:14.5px}
+.frame{position:relative;width:100%;height:760px;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--bg)}
+.frame iframe{width:100%;height:100%;border:0}
+.frame-note{display:none;font-size:14px;color:var(--muted);margin-top:10px}
+
+/* ---- impact KPIs ---- */
+.impact{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px}
+.kpi{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 22px;border-top:3px solid var(--accent)}
+.ktag{font:500 12px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.kpi .v{font:600 40px/1 var(--serif);color:var(--accent);margin:10px 0 4px}
+.kpi .k{font:600 15px var(--sans);margin-bottom:8px}
+.kpi p{margin:0;font-size:14px;color:var(--muted);line-height:1.5}
+
+/* ---- sections ---- */
+section{padding:64px 0;border-top:1px solid var(--line)}
+.sec-label{font:500 13px var(--mono);color:var(--muted);margin:0 0 8px}
+h2.sec{font:600 34px/1.15 var(--serif);margin:0 0 32px;letter-spacing:-.01em}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:56px}
+.facts{display:grid;grid-template-columns:120px 1fr;gap:10px 18px;margin:24px 0 0;font-size:15px}
+.facts dt{font:500 13px var(--mono);color:var(--muted);padding-top:2px}
+.facts dd{margin:0}
+.depth h3{font:600 18px var(--serif);margin:0 0 4px}
+.depth > p{color:var(--muted);font-size:14px;margin:0 0 18px}
+.level{margin-bottom:16px}
+.level .lv{display:flex;align-items:center;gap:10px;font:500 13px var(--mono);color:var(--muted);margin-bottom:8px}
+.dots{display:inline-flex;gap:4px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.dots i.on{background:var(--accent)}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font:500 13px var(--mono);padding:4px 10px;border-radius:999px;background:var(--paper);border:1px solid var(--line)}
+
+/* experience timeline */
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.job{position:relative;padding:0 0 40px 32px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.job .when{font:500 13px var(--mono);color:var(--muted)}
+.job h3{font:700 26px/1.25 var(--serif);margin:4px 0 2px;letter-spacing:-.01em}
+.job .org{color:var(--muted);margin:0 0 12px}
+.job ul{margin:0;padding-left:18px}
+.job li{margin-bottom:6px}
+details.story{margin:12px 0 0;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+details.story summary{cursor:pointer;padding:10px 14px;font:600 14px var(--sans);color:var(--accent);list-style:none}
+details.story summary::-webkit-details-marker{display:none}
+details.story summary::after{content:" +";font-family:var(--mono)}
+details.story[open] summary::after{content:" −"}
+details.story .in{padding:0 16px 14px}
+details.story h4{font:500 12px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:12px 0 4px}
+details.story p{margin:0}
+
+/* projects */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column}
+.card .pills{margin-bottom:12px}
+.card .pill{font-size:12px;padding:3px 9px;background:var(--bg)}
+.card h3{font:600 21px/1.3 var(--serif);margin:0 0 8px}
+.card p{margin:0 0 16px;font-size:15px}
+.card .btn{align-self:flex-start;margin-top:auto}
+.card.soon{border-style:dashed}
+.card.soon .btn{opacity:.6;pointer-events:none;border-style:dashed}
+
+.more{margin:24px 0 0;font:500 14px var(--mono)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.contact-grid a{display:block;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px;text-decoration:none;color:var(--ink)}
+.contact-grid a:hover{border-color:var(--accent)}
+.contact-grid small{display:block;font:500 12px var(--mono);color:var(--muted);margin-bottom:4px}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+/* slots for Eashan's own words; remove the class once written */
+.mine{background:var(--mine-soft);color:var(--mine);border:1px dashed var(--mine);border-radius:6px;padding:8px 12px;font-size:14px;font-style:italic;display:block}
+.mine::before{content:"✏️ your words · ";font-style:normal;font-weight:600}
+
+@media (max-width:860px){
+  .hero-grid,.about-grid{grid-template-columns:1fr;gap:28px}
+  .impact{grid-template-columns:1fr 1fr}
+  .cards,.contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .eyebrow{font-size:16px}
+  .job h3{font-size:22px}
+  .site-head nav{gap:12px;font-size:13px}
+  .site-head nav .opt{display:none}
+  .brand small{display:none}
+  .frame{height:auto;aspect-ratio:3/4}
+  .frame-note{display:block}
+  .impact{grid-template-columns:1fr}
+  .hero::after{width:320px;height:320px;border-width:28px;right:-140px;top:-80px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="#">
+    <span class="mark" aria-hidden="true">EA</span>
+    <span><b>Eashan Arora</b><small>Data analyst · United States</small></span>
+  </a>
+  <nav aria-label="Main">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div></header>
+
+<main id="main">
+<div class="hero"><div class="wrap">
+  <p class="eyebrow">Data Analytics · Analytics Engineering · Business Intelligence</p>
+  <div class="hero-grid">
+    <h1>From raw data to trusted dashboards, I build it end to end.</h1>
+    <div>
+      <p class="summary">I am a data analyst with 5+ years of experience across fintech, hospitality and manufacturing, working on revenue and financial analytics, pricing and BI reporting. I’ve built ETL pipelines, tested pricing strategies and created dashboards for senior leadership. I like working through the full problem, from getting the data right to explaining what the results mean for the business.</p>
+      <p class="stack">SQL &nbsp;/&nbsp; dbt &nbsp;/&nbsp; Tableau &nbsp;/&nbsp; Tableau Prep &nbsp;/&nbsp; Python &nbsp;/&nbsp; Redshift &nbsp;/&nbsp; Snowflake</p>
+      <div class="btns">
+        <a class="btn solid" href="#projects">See my work</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View résumé</a>
+        <a class="btn" href="resume.pdf" download="Eashan_Arora_Resume.pdf">Download résumé</a>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="wrap">
+  <!-- ===== Impact KPIs ===== -->
+  <div class="impact">
+    <div class="kpi"><span class="ktag">Pricing</span><div class="v">+18%</div><div class="k">revenue per event</div>
+      <p>Ran dynamic against static pricing on alternating weeks and confirmed the gap with a t-test, so the pricing call rested on evidence.</p></div>
+    <div class="kpi"><span class="ktag">Marketing</span><div class="v">+12%</div><div class="k">average order value</div>
+      <p>My pipeline over 1M+ bookings showed which promo codes paid off. After Marketing adjusted promo spend, order value rose (before/after comparison).</p></div>
+    <div class="kpi"><span class="ktag">Automation</span><div class="v">40%</div><div class="k">less report prep time</div>
+      <p>Automated recurring industry reports in Python, so the team spent less time building reports and more time using them.</p></div>
+    <div class="kpi"><span class="ktag">Personal project</span><div class="v">48%</div><div class="k">of fraud caught</div>
+      <p>In my dbt payments project, one risk score threshold caught nearly half of fraud while blocking under 0.2% of all payments. <a href="https://github.com/eashan27/Payments-Fraud-and-Profitability-Analytics" target="_blank" rel="noopener">View repo →</a></p></div>
+  </div>
+
+
+</div>
+
+<!-- ===== About ===== -->
+<section id="about"><div class="wrap">
+  <p class="sec-label">About</p>
+  <h2 class="sec">A bit about me</h2>
+  <div class="about-grid">
+    <div>
+      <p>I’ve spent the last three years as a Data Analyst on the Revenue Management and Analytics team at Hornblower Group. I work closely with teams like Finance, Operations and Marketing, so a big part of my role isn’t just analyzing data, but understanding the business problem behind the request and figuring out how the data can help solve it.</p>
+      <!-- Optional: add one personal sentence here (how you got into data, or something outside work) -->
+      <dl class="facts">
+        <dt>Degree</dt><dd>MS Business Analytics, University of Illinois Chicago (2023)</dd>
+        <dt>Undergrad</dt><dd>BTech Computer Science, Jaypee Institute of Information Technology (2020)</dd>
+        <dt>Focus</dt><dd>Revenue and pricing analytics, data pipelines, dashboards</dd>
+        <dt>Looking for</dt><dd>Data Analyst, BI Analyst and Analytics Engineer roles</dd>
+        <dt>Based in</dt><dd>United States, open to roles anywhere in the US</dd>
+      </dl>
+    </div>
+    <div class="depth">
+      <h3>Tools and technologies</h3>
+      <div class="level"><div class="lv">Languages</div>
+        <div class="pills"><span class="pill">SQL</span><span class="pill">Python</span></div></div>
+      <div class="level"><div class="lv">Data and warehousing</div>
+        <div class="pills"><span class="pill">dbt</span><span class="pill">Redshift</span><span class="pill">Snowflake</span><span class="pill">AWS Glue</span><span class="pill">DynamoDB</span></div></div>
+      <div class="level"><div class="lv">BI and reporting</div>
+        <div class="pills"><span class="pill">Tableau</span><span class="pill">Tableau Prep</span><span class="pill">Power BI</span></div></div>
+      <div class="level"><div class="lv">Analysis</div>
+        <div class="pills"><span class="pill">A/B testing</span><span class="pill">Statistics</span><span class="pill">Machine learning (regression, classification)</span></div></div>
+      <div class="level"><div class="lv">Other</div>
+        <div class="pills"><span class="pill">Salesforce (CRM)</span><span class="pill">Git &amp; GitHub Actions</span></div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ===== Experience ===== -->
+<section id="experience"><div class="wrap">
+  <p class="sec-label">Experience</p>
+  <h2 class="sec">Work experience</h2>
+  <ol class="timeline">
+    <li class="job">
+      <span class="when">Jun 2023 – Present</span>
+      <h3>Data Analyst, Revenue Management and Analytics</h3>
+      <p class="org">Hornblower Group (City Cruises)</p>
+      <ul>
+        <li>Ran a pricing A/B test, dynamic against static pricing on alternating weeks, and checked the result with a t-test.</li>
+        <li>Built a Python and AWS Glue pipeline that moves 1M+ bookings into Redshift so Marketing could see which promo codes paid off.</li>
+        <li>Worked with Finance on a rolling three month revenue forecast for monthly planning, covering $8M+ in revenue.</li>
+        <li>Built 20+ Tableau dashboards on Redshift and Snowflake models that became the standard performance view across 3 business lines, including a sales funnel view from web traffic to booked order.</li>
+        <li>Automated the weekly bookings variance report with an AI agent, replacing hours of manual review across several Tableau reports.</li>
+      </ul>
+    </li>
+    <li class="job">
+      <span class="when">May 2022 – Aug 2022</span>
+      <h3>Business Intelligence Analyst Intern</h3>
+      <p class="org">Yokohama Off-Highway Tires America</p>
+      <ul>
+        <li>Built 5+ Power BI dashboards on regional sales growth and product mix for the sales team.</li>
+        <li>Cleaned 2M+ rows of regional sales data into a five year SQL data warehouse for market share analysis.</li>
+        <li>Automated recurring industry reports in Python, cutting prep time by 40%.</li>
+      </ul>
+    </li>
+    <li class="job">
+      <span class="when">Feb 2020 – Aug 2021</span>
+      <h3>Data Science Analyst</h3>
+      <p class="org">LUMIQ · fintech</p>
+      <ul>
+        <li>Calculated credit risk metrics (probability of default, loss given default, exposure at default) with logistic regression.</li>
+        <li>Wrote SQL over 10M transaction records to find delinquency patterns and high risk segments.</li>
+        <li>Worked on a Rasa chatbot pipeline for financial customer queries and on automated KYC document extraction.</li>
+      </ul>
+    </li>
+  </ol>
+</div></section>
+
+<!-- ===== Live dashboard ===== -->
+<section id="dashboard"><div class="wrap">
+  <div class="live">
+    <div class="live-head">
+      <div>
+        <span class="tag">Live dashboard</span>
+        <h2>Financial consumer complaints</h2>
+      </div>
+      <a class="btn" href="https://public.tableau.com/app/profile/eashan.arora/viz/Financial-Consumer-Complaints-Dashboard/FC_OVERVIEW" target="_blank" rel="noopener">Open in Tableau Public</a>
+    </div>
+    <div class="frame">
+      <iframe title="Financial consumer complaints dashboard (Tableau Public)" loading="lazy" allowfullscreen
+        src="https://public.tableau.com/views/Financial-Consumer-Complaints-Dashboard/FC_OVERVIEW?:showVizHome=no&:embed=true&:toolbar=bottom&:tabs=no"></iframe>
+    </div>
+    <p class="frame-note">Built for wider screens. On a phone, open it in Tableau Public for the full view.</p>
+  </div>
+</div></section>
+
+<!-- ===== Projects ===== -->
+<section id="projects"><div class="wrap">
+  <h2 class="sec">Projects</h2>
+  <div class="cards">
+    <article class="card">
+      <div class="pills"><span class="pill">dbt</span><span class="pill">SQL</span><span class="pill">GitHub Actions</span><span class="pill">Fintech</span></div>
+      <h3>Payments fraud and profitability</h3>
+      <p>A dbt project on 94K synthetic card payments, with staging, core and reporting layers, an SCD Type 2 snapshot for point-in-time risk tiers, a semantic layer, and 83 tests.</p>
+      <a class="btn" href="https://github.com/eashan27/Payments-Fraud-and-Profitability-Analytics" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+    <article class="card">
+      <div class="pills"><span class="pill">Tableau</span><span class="pill">Finance</span></div>
+      <h3>Financial consumer complaints</h3>
+      <p>The live dashboard shown just above this section.</p>
+      <a class="btn" href="https://public.tableau.com/app/profile/eashan.arora/viz/Financial-Consumer-Complaints-Dashboard/FC_OVERVIEW" target="_blank" rel="noopener">Open dashboard</a>
+    </article>
+    <article class="card">
+      <div class="pills"><span class="pill">Python</span><span class="pill">NLP</span></div>
+      <h3>NLU pipeline for chatbots</h3>
+      <p>Intent classification and entity extraction on the public ATIS flight dataset.</p>
+      <a class="btn" href="https://github.com/eashan27/NLU-PIPELINE" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+    <article class="card">
+      <div class="pills"><span class="pill">SQL</span><span class="pill">Travel</span></div>
+      <h3>Travel company SQL case study</h3>
+      <p>SQL on a flights and hotels booking database: bookings by user segment, first booking type, and time between a user's first and last booking.</p>
+      <a class="btn" href="https://github.com/eashan27/Travel-Company-SQL-Case-Study" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+    <article class="card">
+      <div class="pills"><span class="pill">SQL Server</span><span class="pill">Finance</span></div>
+      <h3>Credit card spending analysis</h3>
+      <p>SQL Server queries on a public Kaggle dataset of credit card spending in India, looking at spending patterns across cities, card types and expense types.</p>
+      <a class="btn" href="https://github.com/eashan27/credit_card_transactions" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+  </div>
+  <p class="more"><a href="https://github.com/eashan27" target="_blank" rel="noopener">See all my repositories on GitHub →</a></p>
+</div></section>
+
+<!-- ===== Contact ===== -->
+<section id="contact"><div class="wrap">
+  <p class="sec-label">Contact</p>
+  <h2 class="sec">Let's talk</h2>
+  <div class="contact-grid">
+    <a href="mailto:eashanarora11@gmail.com"><small>Email</small>eashanarora11@gmail.com</a>
+    <a href="https://www.linkedin.com/in/eashanarora27/" target="_blank" rel="noopener"><small>LinkedIn</small>in/eashanarora27</a>
+    <a href="https://github.com/eashan27" target="_blank" rel="noopener"><small>GitHub</small>eashan27</a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 Eashan Arora</span><span>United States</span>
+</div></footer>
+</body>
+</html>
